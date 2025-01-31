@@ -1,0 +1,1 @@
+{"name":"Local: question_decay_max_score","url":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\greedy\\question_decay_max_score.cpp","tests":[{"id":1712038492657,"input":"1\n2\n5 1 3 10 5 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\greedy\\question_decay_max_score.cpp","group":"local","local":true}

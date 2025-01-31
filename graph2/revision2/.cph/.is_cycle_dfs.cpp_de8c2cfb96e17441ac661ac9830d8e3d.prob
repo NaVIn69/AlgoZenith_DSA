@@ -1,0 +1,1 @@
+{"name":"Local: is_cycle_dfs","url":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\graph2\\revision2\\is_cycle_dfs.cpp","tests":[{"id":1736663083377,"input":"4 3\n1 2\n2 3\n3 4\n\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\graph2\\revision2\\is_cycle_dfs.cpp","group":"local","local":true}

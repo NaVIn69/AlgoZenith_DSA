@@ -1,0 +1,40 @@
+// here we have to find the 4 distnict element which sum is equal to target
+// here we use the partition 
+// in map we keep the sum of (c+d)
+// and we iterate for (a+b)
+
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long
+#define endl "\n"
+int n,target;
+int arr[10010];
+bool is_4sum(){
+    map<int,int>pos;
+    for(int b=n-2;b>=1;b--){
+         for(int a=b-1;a>=0;a--){
+              if(pos.find(target-arr[a]-arr[b])!=pos.end()){
+                     return 1;
+              }
+         }
+         int c=b;
+         for(int d=c+1;d<n;d++){
+            pos[arr[c]+arr[d]]++;
+         }
+    }
+    return 0;
+
+}
+void solve(){
+cin>>n>>target;
+for(int i=0;i<n;i++) cin>>arr[i];
+if(is_4sum()){
+    cout<<"YES"<<endl;
+}else{
+    cout<<"NO"<<endl;
+}
+
+}
+signed main(){
+   solve();
+}

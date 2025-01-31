@@ -1,0 +1,74 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long
+#define endl "\n"
+int n,m;
+vector<vector<int>>g;
+vector<int>vis,topo;
+void dfs(int node){
+    vis[node]=1;
+    for(auto v:g[node]){
+        if(!vis[v]){
+            dfs(v);
+        }
+    }
+    topo.push_back(node);
+}
+//here we are find the longest path in DAG
+int dp[100100];
+int rec(int node){ // give me longest path starting from the node 
+   if(dp[node]!=-1) return dp[node];
+   int ans=1;
+   //here we are find the longest path from node by traversing their neighbour node
+   for(auto v:g[node]){
+          ans=max(ans,1+rec(v));
+   }
+   return dp[node]=ans;
+
+}
+
+void solve(){
+    cin>>n>>m;
+    g.resize(n+1);
+    vis.resize(n+1,0);
+    for(int i=0;i<m;i++){
+        int a,b;
+        cin>>a>>b;
+        g[a].push_back(b);
+    }
+    for(int i=1;i<=n;i++){
+        if(!vis[i]){
+            dfs(i);
+        }
+    }
+    memset(dp,-1,sizeof(dp));
+    //here longest gives me number of nodes in that longest path
+    // int longest=0;
+    // for(int i=1;i<=n;i++){
+    //     longest=max(longest,rec(i));
+    // }
+    // cout<<longest<<endl;
+    // reverse(topo.begin(),topo.end());
+    // for(auto v:topo){
+    //     cout<<v<<" ";
+    // }
+    // cout<<endl;
+    //we can find longest path in the order of topological ordering
+    int final=0;
+    for(auto node:topo){
+        int ans=1;
+        for(auto v:g[node]){
+            ans=max(ans,1+dp[v]);
+        }
+        dp[node]=ans;
+        final=max(final,dp[node]);
+    }
+    cout<<final<<endl;
+
+}
+signed main(){
+    ios_base::sync_with_stdio(NULL);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    solve();
+}

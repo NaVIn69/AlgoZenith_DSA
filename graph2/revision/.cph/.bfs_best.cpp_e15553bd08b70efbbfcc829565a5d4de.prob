@@ -1,0 +1,1 @@
+{"name":"Local: bfs_best","url":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\graph2\\revision\\bfs_best.cpp","tests":[{"id":1731762217064,"input":"7 6\n1 2\n1 3\n2 4\n2 5\n3 6\n3 7","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\graph2\\revision\\bfs_best.cpp","group":"local","local":true}

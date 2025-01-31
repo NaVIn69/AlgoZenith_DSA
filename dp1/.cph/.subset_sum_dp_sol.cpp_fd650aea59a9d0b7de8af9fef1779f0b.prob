@@ -1,0 +1,1 @@
+{"name":"Local: subset_sum_dp_sol","url":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\dp1\\subset_sum_dp_sol.cpp","tests":[{"id":1711436674287,"input":"5 7\n1 8 9 0 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\dp1\\subset_sum_dp_sol.cpp","group":"local","local":true}

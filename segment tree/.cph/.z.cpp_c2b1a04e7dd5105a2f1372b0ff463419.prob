@@ -1,0 +1,1 @@
+{"name":"Local: z","url":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\segment tree\\z.cpp","tests":[{"id":1720855896063,"input":"1\n6 3\n2 1 3 4 6 1\n2 0 1\n1 4 1\n2 4 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\segment tree\\z.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: sudoku_solving","url":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\recurssion\\sudoku_solving.cpp","tests":[{"id":1707369108397,"input":"0 0 1 0\n4 0 0 0\n0 0 0 2\n0 3 0 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\recurssion\\sudoku_solving.cpp","group":"local","local":true}

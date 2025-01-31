@@ -1,0 +1,14 @@
+during recursive code
+// first find  what is the level
+// then choice
+// check
+//move
+.. place
+.. recursive move
+..unplace
+
+find how many parameter in recursive function we need to solve the problem
+// there is always one variable/DATA STRUCTURE which is going to shared across the all recursive code 
+// always write what is the defanition of your function
+
+// do the Dry run on some of the test case

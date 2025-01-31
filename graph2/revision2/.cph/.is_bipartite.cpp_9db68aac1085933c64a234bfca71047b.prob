@@ -1,0 +1,1 @@
+{"name":"Local: is_bipartite","url":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\graph2\\revision2\\is_bipartite.cpp","tests":[{"id":1736662178652,"input":"4 4\n1 2 \n2 3\n3 4\n4 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\graph2\\revision2\\is_bipartite.cpp","group":"local","local":true}
