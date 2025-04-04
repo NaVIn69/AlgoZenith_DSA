@@ -1,0 +1,1 @@
+{"name":"Local: string_trie","url":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\trie\\string_trie.cpp","tests":[{"id":1739797686007,"input":"4\naa\naac\nacd\ncd\n1\naac 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\trie\\string_trie.cpp","group":"local","local":true}

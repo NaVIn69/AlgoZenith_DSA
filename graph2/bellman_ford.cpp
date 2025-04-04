@@ -3,7 +3,7 @@ using namespace std;
 #define int long long
 #define endl "\n"
 int n,m;
-vector<vector<int>>g;
+
 vector<int>parent;
 vector<pair<pair<int,int>,int>>edge;
 vector<int>dis,dis2;
@@ -49,7 +49,7 @@ void bellman_ford(int sc_node){
 }
 void solve(){
     cin>>n>>m;
-    g.resize(n+1);
+
     for(int i=0;i<m;i++){
         int a,b,c;
         cin>>a>>b>>c;

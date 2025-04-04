@@ -78,15 +78,22 @@ struct double_hash{
 };
 
 void solve(){
-    string s;
-    cin>>s;
-    int n=s.size();
-    hasher hash;
-    hash.init(s,31,1e9+7);
-//    double shash1;
+
+   double_hash shash1;
 //    shash1.init(s,31,999999937);
 //    shash2.init(s,29,1000000021);
-cout<<hash.getfHash(0,2)<<" "<<hash.getfHash(4,6)<<endl;
+   int n;
+   map<pair<int,int>,string>mpp;
+   for(int i=0;i<n;i++){
+     string str;
+     cin>>str;
+        shash1.init(str);
+
+     pair<int,int>p=shash1.gethash(0,str.size());
+     mpp[p]=str;
+   }
+    
+
 
 
  

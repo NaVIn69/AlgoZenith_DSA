@@ -1,0 +1,1 @@
+{"name":"Local: find_all_prime_factor_logn","url":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\Number Theory\\find_all_prime_factor_logn.cpp","tests":[{"id":1743152089067,"input":"49\n1\n49","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\Number Theory\\find_all_prime_factor_logn.cpp","group":"local","local":true}

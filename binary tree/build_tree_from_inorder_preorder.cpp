@@ -25,7 +25,7 @@ node*create_in_pre_to_binarytree(int lin,int rin,int lpre,int rpre){
     int brpoints=mpp[rootval];
     node*root= new node(rootval);
     root->left=create_in_pre_to_binarytree(lin,brpoints-1, lpre+1,lpre+(brpoints-lin));
-    root->right=create_in_pre_to_binarytree(brpoints+1,rin,lpre+(brpoints-lin)+1,lpre);
+    root->right=create_in_pre_to_binarytree(brpoints+1,rin,lpre+(brpoints-lin)+1,rpre);
     return root;
 
 }

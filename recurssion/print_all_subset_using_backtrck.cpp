@@ -18,8 +18,11 @@ void rec(int level){
     //take
     sol.push_back(arr[level]);
     
+    // take that element
     all_sol.push_back(sol);
+    // move to the next element 
     rec(level+1);
+    
     sol.pop_back();
     //dont take;
     rec(level+1);

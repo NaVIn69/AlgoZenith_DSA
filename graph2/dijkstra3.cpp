@@ -42,7 +42,7 @@ void solve(){
     int a,b,c;
     cin>>a>>b>>c;
     g[a].push_back({b,c});
-    g[b].push_back({a,c});
+   //  g[b].push_back({a,c});
  }
  int sc;
  cin>>sc;

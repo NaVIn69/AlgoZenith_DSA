@@ -32,9 +32,9 @@ struct manacher{
         run_manacher(t+"#");
     }
     // abbabba
-    // char odd centred
-    // char ke bich even centred
-
+    // char odd centred odd=1 ,, here we get the odd length palindrome
+    // char ke bich even centred just uss center ke badd wla space here odd =0 // here we get the even length palindrome 
+// this cen is in the main string
     int getlongest(int cen,bool odd){
         int pos=2*cen+1+(!odd);
         return p[pos]-1;

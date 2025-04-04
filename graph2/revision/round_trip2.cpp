@@ -31,6 +31,7 @@ void solve(){
     int a,b;
     cin>>a>>b;
     g[a].push_back(b);
+    g[b].push_back(a);
    }
    vis.assign(n+1,0);
    for(int i=1;i<=n;i++){

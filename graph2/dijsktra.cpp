@@ -5,14 +5,19 @@ using namespace std;
 int n,m;
 vector<vector<pair<int,int>>>g;
 vector<int>vis,dis;
+vector<int>path;
 void sssp(int sc){
     vis.assign(n+1,0);
-    dis.assign(n+1,1e9);
+    dis.assign(n+1,1e18);
+    path.assign(n+1,0);
     priority_queue<pair<int,int>>q;
     q.push(make_pair(0,sc));
+    path[sc]=1;
+
     dis[sc]=0;
     while(!q.empty()){
           int node=q.top().second;
+          int curr=-q.top().first;
           q.pop();
           if(vis[node]) continue;
           vis[node]=1;
@@ -22,6 +27,9 @@ void sssp(int sc){
               if(dis[neigh]>dis[node]+w){
                 dis[neigh]=dis[node]+w;
                 q.push({-dis[neigh],neigh});
+                path[neigh]=path[node];
+              }else if(dis[neigh]==dis[node]+w){
+                path[neigh]=path[neigh]+path[node];
               }
           }
     }
@@ -35,12 +43,16 @@ void solve(){
         g[a].push_back({b,c});
     //    g[b].push_back({a,c});
     }
-    int x,y;
-    cin>>x>>y;
+    int x=1;
     sssp(x);
    for(int i=1;i<=n;i++){
-    cout<<dis[i]<<endl;
+    cout<<dis[i]<<" ";
    }
+   cout<<endl;
+   for(int i=1;i<=n;i++){
+    cout<<path[i]<<" ";
+   }
+   cout<<endl;
 
 }
 signed main(){

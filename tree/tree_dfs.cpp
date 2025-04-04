@@ -13,12 +13,15 @@ void dfs(int node,int parent,int depth){
     par[node]=parent;
     subtreesz[node]=1;
     for(auto v:g[node]){
+
         if(v!=parent){
             numchild[node]++;
             dfs(v,node,depth+1);
             subtreesz[node]+=subtreesz[v];
         }
+        
     }
+
     if(numchild[node]==0){
         isleaf[node]=1;
     }

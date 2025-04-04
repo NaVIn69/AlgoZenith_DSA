@@ -1,0 +1,1 @@
+{"name":"Local: bit_trie","url":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\trie\\bit_trie.cpp","tests":[{"id":1739430931864,"input":"5\n1 2 3 4 5","output":""},{"id":1739881829834,"input":"6\n3 10 5 25 2 8","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\palpr\\Desktop\\AlgoZenith\\trie\\bit_trie.cpp","group":"local","local":true}
