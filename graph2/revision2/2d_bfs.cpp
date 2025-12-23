@@ -17,7 +17,7 @@ int dy_k[8]={-1,-2,-2,-1,1,2,2,1};
 /// simple 4 dirsction
 int dx[4]={1,-1,0,0};
 int dy[4]={0,0,-1,1};
-    state st,f;
+state st,f;
 
 void bfs(state st){
     vis.assign(n+1,vector<int>(m+1,0));

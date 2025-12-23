@@ -29,10 +29,10 @@ void mergeBySize(int u,int v){
     if(uroot!=vroot){
       if(size[uroot]>size[vroot]){
          // then we connect the v root with u
-         parent[v]=u;
+         parent[v_root]=u_root;
          size[uroot]+=size[vroot];
       }else{
-        parent[u]=v;
+        parent[u_root]=v_root;
         size[vroot]+=size[uroot];
       }
 
@@ -71,11 +71,37 @@ void reset(){
 
 
 };
+
+vector<vector<pair<int,int>>>g;
+vector<int>vis;
+void prims_algo(){
+    // here we use the min heap and here find out the minimum cost 
+    priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
+    pq.push({0,0}); // wt node
+    int sum=0;
+    while(!pq.empty()){
+        auto it=pq.top();
+        pq.pop();
+        int node=it.second;
+        int wt=it.first;
+        if(vis[node])continue;
+        vis[node]=1;
+        sum+=wt;
+        for(auto v:g[node]){
+             if(!vis[v.first]){
+                 pq.push({v.second,v.first});
+             }
+        }
+    }
+
+
+}
 void solve(){
     int n,m;
     cin>>n>>m;
     DSU d(n);
-
+    g.resize(n+1);
+    vis.assign(n+1,0);
     vector<pair<int,pair<int,int>>>edgelist;
     //{c,{a,b}} -> weight to a to b is c
     int cnt=0;
@@ -83,7 +109,10 @@ void solve(){
     for(int i=0;i<m;i++){
         cin>>a>>b>>c;
         edgelist.push_back({c,{a,b}});
+        g[a].push_back({b,c});
+        g[b].push_back({a,c});
     }
+
     sort(edgelist.begin(),edgelist.end());
     // here from given graph we have to make a minimum spanning tree
     // for making maximum spanning tree we have to do like  we have to -c of the edge weight

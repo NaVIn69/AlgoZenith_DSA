@@ -46,6 +46,7 @@ struct stack_single{
 
 };
  
+
 void reverse_stack(stack<int>&st){
     //base case
     if(st.empty()) return;
@@ -53,7 +54,7 @@ void reverse_stack(stack<int>&st){
     int num=st.top();
     st.pop();
     reverse_stack(st);
-    ;
+    st.push(num);
 }
 struct stack_usingarray{
     int top;
@@ -73,35 +74,44 @@ struct stack_usingarray{
     }
 };
 void solve(){
-cin>>n;
+cin>>n; 
+stack<int>st;
 for(int i=0;i<n;i++){
     cin>>arr[i];
+    st.push(arr[i]);
 }
-stack_usingarray st;
-int q;
-cin>>q;
-st.init();
-while(q--){
-    int op;
-    cin>>op;
-    if(op==0){
-        //push
-    int x;
-    cin>>x;
-    st.push(x);
-
-    }else if(op==1){
-        // pop();
-      int idx=st.top;
-      if(idx!=-1){
-        st.top=st.top-1;
-      }
-    }else{
-        //top
-        cout<<st.top2()<<endl;
-
-    }
+reverse_stack(st);
+while(!st.empty()){
+    cout<<st.top()<<" ";
+    st.pop();
 }
+
+ 
+// stack_usingarray st;
+// int q;
+// cin>>q;
+// st.init();
+// while(q--){
+//     int op;
+//     cin>>op;
+//     if(op==0){
+//         //push
+//     int x;
+//     cin>>x;
+//     st.push(x);
+
+//     }else if(op==1){
+//         // pop();
+//       int idx=st.top;
+//       if(idx!=-1){
+//         st.top=st.top-1;
+//       }
+//     }else{
+//         //top
+//         cout<<st.top2()<<endl;
+
+//     }
+// }
 
 
 }

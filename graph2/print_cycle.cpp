@@ -12,6 +12,7 @@ void dfs(int node,int par){
         if(!vis[v]){
             dfs(v,node);
         }else if(v!=par){
+            // here we checking for v----node
             is_cycle=true;
         }
     }

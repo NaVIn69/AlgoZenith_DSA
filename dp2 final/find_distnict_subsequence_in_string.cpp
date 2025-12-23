@@ -11,7 +11,7 @@ void solve(){
 
     int dp[n+1];
     // dp[i] tells me about the number of distnict subsequence upto index i
-    int last_index[26];
+    int last_index[26]={-1};
     // here in last array we store the last index of every character
     int prefix[n+1];
     // in prefix[i] tells me total subsequence formed upto index i

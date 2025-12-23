@@ -24,9 +24,10 @@ vector<int> calculateZ(string s) {
     return Z;
 }
 
+
 int main() {
     string text = "aaaaaa";
-    vector<int> Z = calculateZ(text);
+    vector<int> Z = z_function(text);
     // it used to find the pattern matching 
     // s=pattern+@+text apply the z algo on that string s then we can find the pattern in text 
     // verynice construction s=pattern+@+text

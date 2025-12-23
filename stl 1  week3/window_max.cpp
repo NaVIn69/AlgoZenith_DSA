@@ -18,7 +18,7 @@ void erase(int x){
    }
 }
 
-// getmin value from deque
+// for getting the maximum value 
 int getmax(){
   return dq.front();
 }

@@ -25,6 +25,7 @@ void dfs(int node,int parent,int depth){
     if(numChild[node]==0){
         isleaf[node]=1;
     }
+    
 }
 void solve(){
   int n;

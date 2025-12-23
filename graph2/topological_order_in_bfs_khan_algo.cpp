@@ -13,6 +13,7 @@ void khan(){
    while(!q.empty()){
       int curr=q.front();
       q.pop();
+      // here we removing all the edge from that curr node
       topo.push_back(curr);
       for(auto v:g[curr]){
          indeg[v]--;

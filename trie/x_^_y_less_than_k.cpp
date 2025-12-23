@@ -65,6 +65,7 @@ struct trie{
         }
         return ans;
     }
+    
     int max_query(int n,int ln){
         node*curr=root;
         int ans=0;
@@ -83,6 +84,7 @@ struct trie{
         }
         return ans;
     }
+    
     void Delete(int y,int ln){
         // here we have to delete that element ,
         auto it=mt.find(y);

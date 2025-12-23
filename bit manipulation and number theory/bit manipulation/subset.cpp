@@ -7,15 +7,18 @@ cin>>n;
 for(int i=0;i<n;i++){
     cin>>a[i];
 }
+int tot=0;
 for(int mask=0;mask<(1<<n);mask++){
-
+    int sum=0;
     for(int pos=0;pos<n;pos++){
         if((mask>>pos)&1){
-            cout<<a[pos]<<" ";
+            sum^=a[pos];
         }
     }
-    cout<<endl;
+    tot+=sum;
+    cout<<mask<<" "<<sum<<endl;
 }
+cout<<tot<<endl;
 }
 int main(){
     solve();

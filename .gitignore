@@ -1,1 +1,16 @@
 .qodo
+# Compiled files
+*.exe
+*.bin
+*.out
+
+# CP Helper files
+.cph/
+
+# VS Code
+.vscode/
+**/tempCodeRunnerFile.cpp
+
+# OS junk
+.DS_Store
+Thumbs.db

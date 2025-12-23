@@ -110,14 +110,15 @@ void print(node*root){
 void solve(){
    string str;
    cin>>str;
-   node*root=expressiontree(str);
+   node*root=postfixToexpressiontree(str);
 //    cout<<root->val<<endl;
-   print(root);
-   cout<<"value of expression is "<<eval(root)<<endl;
-   cout<<"postfix notation of that expression is"<<" "<<endl;
+//    print(root);
+//    cout<<"value of expression is "<<eval(root)<<endl;
+//    cout<<"postfix notation of that expression is"<<" "<<endl;
    string str2="";
-   // this give me the postordernotation of the tree
-   postorderNotation(root,str2);
+//    // this give me the postordernotation of the tree
+   inorderNotation(root,str2);
+  
    node*pre=postfixToexpressiontree(str2);
    print(pre);
 

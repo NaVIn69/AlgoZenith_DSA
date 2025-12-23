@@ -11,12 +11,12 @@ struct myds{
     multiset<pair<int,int>>ferq_order;
     multiset<int>low,high;   
     void balanced(){
-        while(low.size()<high.size()){
+        if(low.size()<high.size()){
             int x=*high.begin();
             high.erase(high.find(x));
             low.insert(x);
         }
-        while (low.size()>high.size()+1)
+        if (low.size()>high.size()+1)
         {
             /* code */
             int x=*low.rbegin();

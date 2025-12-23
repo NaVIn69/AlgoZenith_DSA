@@ -71,10 +71,10 @@ void solve(){
   bfs({st,0});
   int ans=INT_MAX;
    for(int bomb=0;bomb<=k;bomb++){
-       ans=min(ans,dis[en.F][en.S][bomb]);
+       cout<<dis[en.F][en.S][bomb]<<" ";
    }
   //here we have break zero wall and we are at starting position
-  cout<<ans<<endl;
+//   cout<<ans<<endl;
 }
 signed main(){
     solve();

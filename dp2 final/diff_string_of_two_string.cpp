@@ -20,7 +20,7 @@ int back[5050][5050];
 // here i denotes the ith in the string s1
 // j denotes the jth in string s2
 int rec(int i,int j){
-    // this function return the length of diff string from s1[i.....n-1] and s2[j......m];
+    // this function return the length of diff string from s1[i.....n-1] and s2[j......m-1];
     // pruning
 
     //base case

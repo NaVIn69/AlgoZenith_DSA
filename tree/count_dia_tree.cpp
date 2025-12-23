@@ -23,7 +23,7 @@ int cnt2=0;
 // this dfs for the even size dia
 void dfs2(int node,int parent,int depth){
       par[node]=parent;
-    dep[node]=depth;
+     dep[node]=depth;
    if(dep[node]==(D/2-1)) cnt2++;
     for(auto v:g[node]){
         if(v!=parent){

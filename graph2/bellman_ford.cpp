@@ -65,7 +65,7 @@ void solve(){
         cout<<i<<" : "<<dis[i]<<" : "<<dis2[i]<<endl;
     }
 
-     for (int i = 1; i <=n; ++i)
+   
             x = parent[x];
 
         vector<int> cycle;

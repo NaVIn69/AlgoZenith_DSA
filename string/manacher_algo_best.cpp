@@ -6,7 +6,7 @@ struct manacher{
     vector<int>p;
      void run_manacher(string s){
         int n=s.length();
-        p.assign(n,1);
+        p.assign(n,1); // radius at ith index 
         int l=1,r=1;
         // both l and r is exclusive 
         for(int i=1;i<n;i++){

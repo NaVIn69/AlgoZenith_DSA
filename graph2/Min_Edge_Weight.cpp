@@ -46,30 +46,27 @@ void solve(){
   int n;
   cin>>n;
   vector<pair<int,pair<int,int>>>edgelist;
-  for(int i=0;i<n-1;i++){
+  for(int i=0;i<n;i++){
       int a,b,c;
       cin>>a>>b>>c;
       edgelist.push_back({c,{a,b}});
   }
   DSU d(n);
   sort(edgelist.rbegin(),edgelist.rend());
-  // that sorting by weight do alot of work in daynamic graph
-
-//   reverse(edgelist.begin(),edgelist.end());
-
-//   for(int i=0;i<n-1;i++){
-//     cout<<edgelist[i].first<<" "<<edgelist[i].second.first<<" "<<edgelist[i].second.second<<endl;
-//   }
+  vector<int>ans;
   int min_cost=0;
   for(int i=0;i<n-1;i++){
+    int c=edgelist[i].first;
     int a=edgelist[i].second.first;
     int b=edgelist[i].second.second;
    int ua=d.findUpar(a);
    int ub=d.findUpar(b);
    // when we are mergin the two nodes , then their ultimate parent tells me the size of that subtree , bcz during mergin that node look like ultimate node
-    min_cost+=(edgelist[i].first*d.size[ua]*d.size[ub]);
-    // adding the contribution of that node into the final answer
-    d.mergeBysize(a,b); 
+    if(ua!=ub){
+      // contribution of the edge between u->v 
+       min_cost+=(c*d.size[ua]*d.size[ub]);
+       d.mergeBysize(a,b);
+    }
   }
   cout<<min_cost<<endl;
 }

@@ -1,8 +1,10 @@
 {
 // take two pointer
 int head=-1,tail=0;
-// data structure is used
-int cnt=0; // ye main krega window ki proprety ko
+// data structure is used to maintain the window property
+map<int,int>mpp;
+int cnt=0;
+ // ye main krega window ki proprety ko
 // ans
 int ans=0;
 while(tail<n){

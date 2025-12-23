@@ -18,6 +18,7 @@ void dfs(int node,int parent,int depth){
         }
     }
 }
+
 int cnt2=0;
 // odd distance pe d/2 , 
 void dfs2(int node,int parent,int depth){

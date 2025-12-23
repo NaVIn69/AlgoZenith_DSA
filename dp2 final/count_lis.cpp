@@ -23,6 +23,7 @@ int rec(int level){
     }
     return dp[level]=ans;
 }
+
 void solve(){
     cin>>n;
     for(int i=0;i<n;i++){
@@ -34,7 +35,10 @@ void solve(){
     for(int i=0;i<n;i++){
         best=max(best,rec(i));
         mpp[rec(i)]++;
+        cout<<dp[i]<<" ";
     }
+    cout<<endl;
+
     int ans=1;
     for(auto v:mpp){
         ans=ans*v.second;

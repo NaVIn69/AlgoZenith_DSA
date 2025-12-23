@@ -13,6 +13,7 @@ void sieve_of_eratosthenes(int n){
         for(int j=i*i;j<=n;j+=i){
             is_prime[j]=0;
         }
+        
      }
  }
  

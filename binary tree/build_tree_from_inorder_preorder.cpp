@@ -11,7 +11,7 @@ struct node{
   char val;
   node*left;
   node*right;
-  node(int data){
+  node(char data){
     this->val=data;
     this->left=NULL;
     this->right=NULL;
